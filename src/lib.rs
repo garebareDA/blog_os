@@ -6,12 +6,15 @@
 #![reexport_test_harness_main = "test_main"]
 #![feature(alloc_error_handler)] // at the top of the file
 
+extern crate alloc;
+
 pub mod gdt;
 pub mod interrupts;
 pub mod serial;
 pub mod vga_buffer;
 pub mod memory;
 pub mod allocator;
+
 
 use core::panic::PanicInfo;
 #[cfg(test)]
